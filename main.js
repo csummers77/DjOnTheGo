@@ -13,16 +13,22 @@ window.onload = function() {
     var a = document.getElementById('play');
     a.addEventListener('click',playPause,false);
 }
-function startFade() {
-    let audioVolume = 0.9
+function startFade(vol) {
     console.log('current time',audio.currentTime);
     console.log(audio.duration)
-   if (audio.currentTime < audio.duration - 10) {
-       audio.volume -=.5
+   if (audio.currentTime  > audio.duration - 10) {
+       
+       audio.volume = vol * ((audio.duration-audio.currentTime)-1)
+       console.log('fade')
+       console.log('audio volume',audio.volume)
    }
+//    setInterval(() => {
+       
+//    }, interval);
 }
 // audio.timeupdate(startFade);
 // console.log('Audio',audio)
-
-audio.addEventListener("timeupdate",startFade) 
+audio.currentTime =200;
+let audioVolume = audio.volume;
+audio.addEventListener("timeupdate",()=>{startFade(audioVolume)}) 
 
