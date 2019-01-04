@@ -30,7 +30,7 @@ function startFade(vol) {
 }
 // audio.timeupdate(startFade);
 // console.log('Audio',audio)
-// audio.currentTime =200;
+audio.currentTime =200;
 // window.onload = function() {
 //     var a = document.getElementById('stop');
 //     a.addEventListener('click',playPause,false);
