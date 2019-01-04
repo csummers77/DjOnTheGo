@@ -1,17 +1,19 @@
 let audio = new Audio('./Music/Kiiara - Gold (Official Video).mp3');
 
-function playPause(e) {
-    if (this.textContent == 'Play') {
+function play() { 
+        document.querySelector(".turn-table").src="pink-vinyl.gif"
         audio.play();
-        this.textContent == 'Pause';
-    } else {
-        audio.pause();
-        this.textContent = 'Play';
-    }
 }
+function stop() {
+    audio.pause();
+    document.querySelector(".turn-table").src="turntable.jpeg"
+}
+
 window.onload = function() {
-    var a = document.getElementById('play');
-    a.addEventListener('click',playPause,false);
+    let playButton = document.getElementById('play');
+    playButton.addEventListener('click',play);
+    let stopButton = document.getElementById('stop');
+    stopButton.addEventListener('click',stop);
 }
 function startFade(vol) {
     console.log('current time',audio.currentTime);
@@ -29,15 +31,13 @@ function startFade(vol) {
 // audio.timeupdate(startFade);
 // console.log('Audio',audio)
 // audio.currentTime =200;
-window.onload = function() {
-    var a = document.getElementById('stop');
-    a.addEventListener('click',playPause,false);
-}
+// window.onload = function() {
+//     var a = document.getElementById('stop');
+//     a.addEventListener('click',playPause,false);
+// }
 let audioVolume = audio.volume;
 audio.addEventListener("timeupdate",()=>{startFade(audioVolume)}) 
 onvolumechange
-
-// function func1() {
 //     alert("This is the first.");
 //   }
 //   function func2() {

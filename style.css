@@ -1,25 +1,29 @@
+body{
+  background-color: black;
+}
 .flex-container {
     display: flex;
     flex-direction: column;
-    background-color: aqua
+    background-color: black;
    
     
     
   }
 
   .bg-info {
-    background-color: #17a2b8!important;
+    background-color: black!important;
     display: flex;
     justify-content: center;
   }
   
 .btn {
-   
     width: 200px;
     margin: 15px;
+    /* background-image: url(https://media.giphy.com/media/2eK5fWkZwRBhNhbC1h/giphy.gif); */
     text-align: center;
     line-height: 420px;
     font-size: 30px;
+    color: red;
 }
     
 
