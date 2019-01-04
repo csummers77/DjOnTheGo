@@ -28,7 +28,39 @@ function startFade(vol) {
 }
 // audio.timeupdate(startFade);
 // console.log('Audio',audio)
-audio.currentTime =200;
+// audio.currentTime =200;
+window.onload = function() {
+    var a = document.getElementById('stop');
+    a.addEventListener('click',playPause,false);
+}
 let audioVolume = audio.volume;
 audio.addEventListener("timeupdate",()=>{startFade(audioVolume)}) 
+onvolumechange
+
+// function func1() {
+//     alert("This is the first.");
+//   }
+//   function func2() {
+//     alert("This is the second.");
+//   }
+  
+//   function addLoadEvent(func) {
+//     var oldonload = window.onload;
+//     if (typeof window.onload != 'function') {
+//       window.onload = func;
+//     } else {
+//       window.onload = function() {
+//         if (oldonload) {
+//           oldonload();
+//         }
+//         func();
+//       }
+//     }
+//   }
+//   addLoadEvent(func1);
+//   addLoadEvent(func2);
+//   addLoadEvent(function() {
+//       document.body.style.backgroundColor = '#EFDF95';
+//   })
+  
 
