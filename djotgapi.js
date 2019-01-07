@@ -1,19 +1,26 @@
 // console.log("sanity check")
+// https://getsongbpm.com/api
 const apiKey = '37d007a56d816107ce5b52c10342db37';
-    // All api calls go to the this link
-const apiBaseUrl = 'curl -X GET "https://api.getsongbpm.com/song/?api_key=37d007a56d816107ce5b52c10342db37&id=983pB"';
-    // All images use this link
-const imageBaseUrl = 'http://image.tmdb.org/t/p/';
+// All api calls go to the this link
+// 
+// Web API Base URL: https://api.getsongbpm.com
+// Method: GET
+// Get the BPM of "Highway to hell" by "AC/DC".
+// curl -X GET "https://api.getsongbpm.com/song/?api_key=YOUR_API_KEY_HERE&id=983pB"
+ 
+const apiBaseUrl = "https://api.getsongbpm.com"
+    // All images use this link - not using images
+// const imageBaseUrl = 'http://image.tmdb.org/t/p/';
 
-const nowPlayingUrl = `${apiBaseUrl}/movie/now_playing?api_key=${apiKey}`
-$.getJSON(nowPlayingUrl, (movieData)=>{
-    // console.log(movieData);
-    movieData.results.forEach((movie)=>{
+const nowPlayingUrl = `${apiBaseUrl}/song/?api_key=${apiKey}`
+$.getJSON(nowPlayingUrl, (songData)=>{
+    // console.log(songData);
+    songData.results.forEach((song)=>{
         const posterUrl = `${imageBaseUrl}w300${movie.poster_path}`
         const newHTML = `
             <div class="col-4">
                 <img src="${posterUrl}"/>
-                ${movie.title}
+                ${song.title}
             </div>`
         $('#movie-grid').append(newHTML)
     })
@@ -24,20 +31,20 @@ $.getJSON(nowPlayingUrl, (movieData)=>{
 
 // })
 $('#movie-form').submit((event)=>{
-    // stop the browser form going forward!
+    // stop the browser from going forward!
     event.preventDefault();
     // get the value the user put in the search box
-    const movieSearch = $('#search-input').val();
+    const songSearch = $('#search-input').val();
     // store the movie for later
-    localStorage.setItem('movieList',movieSearch);
+    localStorage.setItem('songList',songSearch);
     // console.log(movieSearch);
-    const searchUrl = `${apiBaseUrl}/search/movie?api_key=${apiKey}&query=${movieSearch}`
+    const searchUrl = `${apiBaseUrl}/song/?api_key=${apiKey}&query=${songSearch}`
     console.log(searchUrl);
     let newHTML = '';
-    $.getJSON(searchUrl,(movieData)=>{
-        // console.log(movieData);
-        movieData.results.forEach((movie)=>{
-            const posterUrl = `${imageBaseUrl}w300${movie.poster_path}`
+    $.getJSON(searchUrl,(songData)=>{
+        // console.log(songData);
+        songData.results.forEach((song)=>{
+            const posterUrl = `${imageBaseUrl}w300${song.poster_path}`
             newHTML += `
             <div class="col-3">
                 <img src="${posterUrl}" />
