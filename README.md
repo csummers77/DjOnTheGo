@@ -36,6 +36,7 @@ GitHub
 
 ## Challenges & Solutions
 * Fade In/Fade Out 
+* Start/Stop function on songs
 * Obtaining Music to be played\
     Copyright Laws\
     Converting Video Music to MP3\
