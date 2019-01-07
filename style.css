@@ -1,19 +1,22 @@
 body{
-  background-color: black;
+  background-color: green;
+}
+.container{
+  display: flex;
+  background-color: red;
+
 }
 .flex-container {
     display: flex;
     flex-direction: column;
-    background-color: black;
-   
-    
-    
+    background-color: black;     
   }
 
   .bg-info {
-    background-color: black!important;
+    background-color: black;
     display: flex;
     justify-content: center;
+
   }
   
 .btn {

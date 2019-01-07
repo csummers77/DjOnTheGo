@@ -1,24 +1,31 @@
 let audio = new Audio('./Music/Kiiara - Gold (Official Video).mp3');
 let audio2 = new Audio("./Music/Blake Shelton - Turnin' Me On (Audio Video).mp3");
-function playPause(e) {
-    if (this.textContent == 'Play') {
-        audio.play();
-        this.textContent == 'Pause';
-    } else {
-        audio.pause();
-        this.textContent = 'Play';
+let audio3 = new Audio("./Music/Da Baby.mp3")
+function play() { 
+    document.querySelector(".turn-table").src="pink-vinyl.gif"
+    if (audio2.currentTime > 11){
+        audio2.play();
     }
+    else {audio.play()};
 }
+function stop() {
+    document.querySelector(".turn-table").src="turntable.jpeg"
+    audio.pause();
+    audio2.pause();
+}
+
 window.onload = function() {
-    var a = document.getElementById('play');
-    a.addEventListener('click',playPause,false);
+let playButton = document.getElementById('play');
+playButton.addEventListener('click',play);
+let stopButton = document.getElementById('stop');
+stopButton.addEventListener('click',stop);
 }
 // starts the fading in of the first song
 function startFade(vol) {
     console.log('current time',audio.currentTime);
     console.log(audio.duration)
     if (audio.currentTime  > audio.duration - 10) {
-        start(0)
+        start(1)
         let newVolume = ( (vol * ((audio.duration-audio.currentTime)/10)) > 0.1) ? (vol * ((audio.duration-audio.currentTime)/20))-.1 : 0;
     if(newVolume < 0){
         newVolume = 0;
@@ -70,7 +77,8 @@ function fadeIn() {
 audio.currentTime =200;
 let audioVolume = audio.volume;
 audio.addEventListener("timeupdate",()=>{startFade(audioVolume)}) 
-audio2.currentTime =100;
+audio2.currentTime =11;
+console.log(audio2.currentTime)
 // let audio2Volume = 0;
 // audio.addEventListener("timeupdate2",()=>{fadeIn(audio2Volume)}) 
 
