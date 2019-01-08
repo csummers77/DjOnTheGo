@@ -1,7 +1,7 @@
 ## Title: DJ On-The-Go
 
 DJ On-The-Go is a program that allows the user to play music.
-The songs selected to be played will fade in and out to smooth the 
+The songs on the playlis will play and will fade in and out to smooth the 
 listening experience similar to a DJ mixing music.  
 
 
@@ -36,6 +36,7 @@ GitHub
 
 ## Challenges & Solutions
 * Fade In/Fade Out 
+* Start/Stop function on songs
 * Obtaining Music to be played\
     Copyright Laws\
     Converting Video Music to MP3\
