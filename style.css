@@ -1,30 +1,99 @@
 body{
-  background-color: black;
+margin-top: 150px;
+}
+
+.span{
+width: 100px;
+height: 100px;
+background-color: red;
+position: relative;
+-webkit-animation: myfirst 5s linear 2s infinite alternate; /* Safari 4.0 - 8.0 */
+animation: myfirst 5s linear 2s infinite alternate;
+}
+ 
+ /* Safari 4.0 - 8.0 */
+@-webkit-keyframes myfirst {
+0%   {background-color:red; left:0px; top:0px;}
+25%  {background-color:yellow; left:200px; top:0px;}
+50%  {background-color:blue; left:200px; top:200px;}
+75%  {background-color:green; left:0px; top:200px;}
+100% {background-color:red; left:0px; top:0px;}
+}
+ 
+ /* Standard syntax */
+@keyframes myfirst {
+0%   {background-color:red; left:0px; top:0px;}
+25%  {background-color:yellow; left:200px; top:0px;}
+50%  {background-color:blue; left:200px; top:200px;}
+75%  {background-color:green; left:0px; top:200px;}
+100% {background-color:red; left:0px; top:0px;}
+}
+ 
+.flex-container {
+display: flex;
+margin-top: 150px
+}
+ 
+.btn {
+background-color: rgb(245, 3, 3);
+justify-content: safe
+}
+  
+.circle{
+  width:900px;
+  height:900px;
+  border-radius:450px;
+  font-size:20px;
+  line-height:100px;
+  text-align:center;
+  background:rgb(8, 8, 8)
+}
+ 
+#content {
+  width: 900px ;
+  margin-left: auto ;
+  margin-right: auto ;
+  position: relative;
+}
+ 
+.img {
+  margin-top: 225px;
+}
+
+
+
+
+
+
+/* body{
+  background-color: green;
+}
+.container{
+  display: flex;
+  background-color: red;
+
 }
 .flex-container {
     display: flex;
     flex-direction: column;
-    background-color: black;
-   
-    
-    
+    background-color: black;     
   }
 
   .bg-info {
-    background-color: black!important;
+    background-color: black;
     display: flex;
     justify-content: center;
+
   }
   
 .btn {
     width: 200px;
     margin: 15px;
-    /* background-image: url(https://media.giphy.com/media/2eK5fWkZwRBhNhbC1h/giphy.gif); */
     text-align: center;
     line-height: 420px;
     font-size: 30px;
     color: red;
-}
+} */
     
 
 
