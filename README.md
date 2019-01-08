@@ -1,7 +1,7 @@
 ## Title: DJ On-The-Go
 
 DJ On-The-Go is a program that allows the user to play music.
-The songs on the playlis will play and will fade in and out to smooth the 
+The songs on the playlist will fade in and out to smooth the 
 listening experience similar to a DJ mixing music.  
 
 

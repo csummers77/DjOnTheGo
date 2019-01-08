@@ -5,7 +5,7 @@ let audio5 = new Audio("./Music/Da Baby.mp3");
 let audio = new Audio("./Music/Indeep - Last Night A D.J. Saved My Life (1983).mp3");
 let audio4 = new Audio("./Music/Wolfgang Ambros - Zwickts Mi.mp3");
 
-let myMusic = [audio, audio2, audio3, audio4, audio5]
+let myMusic = [audio, audio2, audio3]
 
 
 function play() { 
@@ -38,16 +38,17 @@ function stop() {
 
 // starts the fading in of the first song
 function startFade(vol) {
+    let fadeSong = nowPlaying
     console.log('current time',myMusic[nowPlaying].currentTime);
     console.log(myMusic[nowPlaying].duration)
     if (myMusic[nowPlaying].currentTime  > myMusic[nowPlaying].duration - 10) {
         start(1)
-        let newVolume = ( (vol * ((myMusic[nowPlaying-1].duration-myMusic[nowPlaying-1].currentTime)/10)) > 0.1) ? (vol * ((myMusic[nowPlaying-1].duration-myMusic[nowPlaying-1].currentTime)/20))-.1 : 0;
+        let newVolume = ( (vol * ((myMusic[fadeSong].duration-myMusic[fadeSong].currentTime)/10)) > 0.1) ? (vol * ((myMusic[fadeSong].duration-myMusic[fadeSong].currentTime)/20))-.1 : 0;
     if(newVolume < 0){
         newVolume = 0;
     }
-        myMusic[nowPlaying-1].volume = newVolume
-        console.log('audio volume',myMusic[nowPlaying-1].volume)
+        myMusic[fadeSong].volume = newVolume
+        console.log('audio volume',myMusic[fadeSong].volume)
         console.log('fade') 
     }
 }
@@ -55,6 +56,9 @@ function startFade(vol) {
 // start function to start a new song
 function start(vol) {
     nowPlaying ++
+    if (nowPlaying === myMusic.length){
+        nowPlaying = 0
+    }
     myMusic[nowPlaying].currentTime =200;
     myMusic[nowPlaying].volume = vol
     myMusic[nowPlaying].play()
@@ -63,16 +67,18 @@ function start(vol) {
 }
 
 function fadeIn() {
-    
-    // console.log('current time 2',myMusic[nowPlaying + 1].currentTime);
-    console.log(myMusic[nowPlaying + 1].duration)
+    if (nowPlaying > myMusic.length){
+        nowPlaying = 0
+    }
+    console.log('current time 2',myMusic[nowPlaying].currentTime);
+    console.log(myMusic[nowPlaying].duration)
 
     let avol = 0
 
-    if (myMusic[nowPlaying + 1].volume < 1) {
-        avol = myMusic[nowPlaying + 1].currentTime/100;
+    if (myMusic[nowPlaying].volume < 1) {
+        avol = myMusic[nowPlaying].currentTime/100;
         if(avol >= 1) avol = 1;
-        myMusic[nowPlaying + 1].volume = avol;
+        myMusic[nowPlaying].volume = avol;
         console.log('avol: ', avol);
     }
 }
