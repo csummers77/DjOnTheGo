@@ -1,6 +1,6 @@
 // console.log("sanity check")
 // https://getsongbpm.com/api
-const apiKey = '37d007a56d816107ce5b52c10342db37';
+const apiKey = 
 // All api calls go to the this link
 // 
 // Web API Base URL: https://api.getsongbpm.com
