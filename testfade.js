@@ -9,7 +9,7 @@ let myMusic = [audio, audio2, audio3]
 
 
 function play() { 
-    document.querySelector(".turn-table").src="pink-vinyl.gif"
+    document.querySelector(".turn-table").src="vintage-player.gif"
     if (myMusic[nowPlaying + 1].currentTime > 11){
         myMusic[nowPlaying + 1].play();
     }
@@ -31,7 +31,7 @@ function play() {
   setInterval(songCounter, 1000);
 }
 function stop() {
-    document.querySelector(".turn-table").src="turntable.jpeg"
+    document.querySelector(".turn-table").src="vintage-player.jpg"
     myMusic[nowPlaying].pause();
     myMusic[nowPlaying + 1].pause();
 }

@@ -7,28 +7,28 @@ body{
 .span{
   width: 100px;
   height: 100px;
-  background-color: red; 
+  background-color: white; 
   position: relative;
   -webkit-animation: myfirst 5s linear 2s infinite alternate; /* Safari 4.0 - 8.0 */
   animation: myfirst 5s linear 2s infinite alternate;
 }
 
-/* Safari 4.0 - 8.0 */
+
 @-webkit-keyframes myfirst {
-  0%   {background-color:red; left:0px; top:0px;}
-  25%  {background-color:yellow; left:200px; top:0px;}
-  50%  {background-color:blue; left:200px; top:200px;}
-  75%  {background-color:green; left:0px; top:200px;}
-  100% {background-color:red; left:0px; top:0px;}
+  0%   {background-color:grey; left:0px; top:0px;}
+  25%  {background-color:rgb(134, 134, 122); left:200px; top:0px;}
+  50%  {background-color:rgb(71, 71, 78); left:200px; top:200px;}
+  75%  {background-color:rgb(39, 42, 39); left:0px; top:200px;}
+  100% {background-color:grey; left:0px; top:0px;}
 }
 
-/* Standard syntax */
+
 @keyframes myfirst {
-  0%   {background-color:red; left:0px; top:0px;}
-  25%  {background-color:yellow; left:200px; top:0px;}
-  50%  {background-color:blue; left:200px; top:200px;}
-  75%  {background-color:green; left:0px; top:200px;}
-  100% {background-color:red; left:0px; top:0px;}
+  0%   {background-color:grey; left:0px; top:0px;}
+  25%  {background-color:rgb(134, 134, 122); left:200px; top:0px;}
+  50%  {background-color:rgb(71, 71, 78); left:200px; top:200px;}
+  75%  {background-color:rgb(39, 42, 39); left:0px; top:200px;}
+  100% {background-color:grey; left:0px; top:0px;}
 }
 
 .flex-container {
@@ -41,7 +41,7 @@ body{
 .btn {
     background-color: rgb(245, 3, 3);
   
-    justify-content: safe 
+    justify-content: center 
   
    
 }
@@ -67,9 +67,11 @@ body{
   position: relative;
 }
 
-.img {
-  
+.img-circle {
+  width:100px;
+  height:100px;
   margin-top: 225px;
+  border-radius: 50%;
   
   
 

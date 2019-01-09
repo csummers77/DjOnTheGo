@@ -1,99 +1,69 @@
 body{
-margin-top: 150px;
+    background: url("https://101clipart.com/wp-content/uploads/02/Group%20Dance%20Clipart%2021.jpg"); no-repeat center;
+    background-size: cover;
+    color: green;
+    height: 100vh;
+    text-align: center;
+    margin-top: 150px;
 }
 
-.span{
-width: 100px;
-height: 100px;
-background-color: red;
-position: relative;
--webkit-animation: myfirst 5s linear 2s infinite alternate; /* Safari 4.0 - 8.0 */
-animation: myfirst 5s linear 2s infinite alternate;
-}
- 
- /* Safari 4.0 - 8.0 */
-@-webkit-keyframes myfirst {
-0%   {background-color:red; left:0px; top:0px;}
-25%  {background-color:yellow; left:200px; top:0px;}
-50%  {background-color:blue; left:200px; top:200px;}
-75%  {background-color:green; left:0px; top:200px;}
-100% {background-color:red; left:0px; top:0px;}
-}
- 
- /* Standard syntax */
-@keyframes myfirst {
-0%   {background-color:red; left:0px; top:0px;}
-25%  {background-color:yellow; left:200px; top:0px;}
-50%  {background-color:blue; left:200px; top:200px;}
-75%  {background-color:green; left:0px; top:200px;}
-100% {background-color:red; left:0px; top:0px;}
-}
+
+
+
  
 .flex-container {
 display: flex;
-margin-top: 150px
+
 }
  
 .btn {
 background-color: rgb(245, 3, 3);
-justify-content: safe
+justify-content: center
 }
   
+#play{
+  position: absolute;
+  top: 45%;
+  left: 0px;  
+}
+
+#stop{
+  position: absolute;
+  top: 45%;
+  right: 0px;
+}
+
 .circle{
-  width:900px;
-  height:900px;
-  border-radius:450px;
-  font-size:20px;
-  line-height:100px;
-  text-align:center;
-  background:rgb(8, 8, 8)
-}
- 
-#content {
-  width: 900px ;
-  margin-left: auto ;
-  margin-right: auto ;
+  width: 700px;
+  height:700px;
+  border-radius: 50%;
+  margin: 0 auto;
+  float: none;
   position: relative;
+
+  
+  
+
+  background:rgb(107, 93, 93)
+  
 }
  
-.img {
-  margin-top: 225px;
+
+.ttwrapper{
+  text-align: center;
+}
+
+.turn-table{
+  width: 500; 
+  height: 500;
+  border-radius: 50%;
+  /* margin-left: 50px; */
+  position: float;
+  margin-top: 100px;
 }
 
 
 
 
-
-
-/* body{
-  background-color: green;
-}
-.container{
-  display: flex;
-  background-color: red;
-
-}
-.flex-container {
-    display: flex;
-    flex-direction: column;
-    background-color: black;     
-  }
-
-  .bg-info {
-    background-color: black;
-    display: flex;
-    justify-content: center;
-
-  }
-  
-.btn {
-    width: 200px;
-    margin: 15px;
-    text-align: center;
-    line-height: 420px;
-    font-size: 30px;
-    color: red;
-} */
-    
 
 
