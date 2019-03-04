@@ -1,20 +1,21 @@
 let nowPlaying = 0;
 let audio2 = new Audio('./Music/Kiiara - Gold (Official Video).mp3');
 let audio3 = new Audio("./Music/Blake Shelton - Turnin' Me On (Audio Video).mp3");
-let audio5 = new Audio("./Music/Da Baby.mp3");
+let audio5 = new Audio("./Music/Lorde - Royals (US Version).mp3");
 let audio = new Audio("./Music/Indeep - Last Night A D.J. Saved My Life (1983).mp3");
 let audio4 = new Audio("./Music/Wolfgang Ambros - Zwickts Mi.mp3");
 
-let myMusic = [audio, audio2, audio3]
+let myMusic = [audio, audio3, audio5]
 
 
 function play() { 
-    document.querySelector(".turn-table").src="vintage-player.gif"
+    document.querySelector(".turn-table").src="./images/NewTurntable.gif"
     if (myMusic[nowPlaying + 1].currentTime > 11){
         myMusic[nowPlaying + 1].play();
     }
     else {myMusic[nowPlaying].play()};
     var counter = Math.floor(audio.duration) ;
+    
   function songCounter() {
      let minutes = Math.floor(counter/60);
      // let seconds = counter<10 ? "0" + counter%60 : counter%60;
@@ -31,7 +32,7 @@ function play() {
   setInterval(songCounter, 1000);
 }
 function stop() {
-    document.querySelector(".turn-table").src="vintage-player.jpg"
+    document.querySelector(".turn-table").src="./images/NewTurntable.jpg"
     myMusic[nowPlaying].pause();
     myMusic[nowPlaying + 1].pause();
 }
@@ -59,7 +60,7 @@ function start(vol) {
     if (nowPlaying === myMusic.length){
         nowPlaying = 0
     }
-    myMusic[nowPlaying].currentTime =200;
+    myMusic[nowPlaying].currentTime = myMusic[nowPlaying].duration -20;
     myMusic[nowPlaying].volume = vol
     myMusic[nowPlaying].play()
     myMusic[nowPlaying].addEventListener("timeupdate",()=>{fadeIn()})
@@ -75,21 +76,21 @@ function fadeIn() {
 
     let avol = 0
 
-    if (myMusic[nowPlaying].volume < 1) {
-        avol = myMusic[nowPlaying].currentTime/100;
+    if (myMusic[nowPlaying].volume < myMusic[nowPlaying] - 20) {
+        avol = (myMusic[nowPlaying].currentTime-(myMusic[nowPlaying].duration -20))/100;
         if(avol >= 1) avol = 1;
         myMusic[nowPlaying].volume = avol;
         console.log('avol: ', avol);
     }
 }
 
-myMusic[nowPlaying].currentTime =200;
+myMusic[nowPlaying].currentTime = 215;
 let audioVolume = myMusic[nowPlaying].volume;
 myMusic[nowPlaying].addEventListener("timeupdate",()=>{startFade(audioVolume)}) 
-myMusic[nowPlaying + 1].currentTime =250;
-console.log(myMusic[nowPlaying + 1].currentTime)
-myMusic[nowPlaying + 1].currentTime =11;
-console.log(myMusic[nowPlaying + 1].currentTime)
+// myMusic[nowPlaying + 1].currentTime = 0;
+// console.log(myMusic[nowPlaying + 1].currentTime)
+// myMusic[nowPlaying + 1].currentTime = 0;
+// console.log(myMusic[nowPlaying + 1].currentTime)
     
 
 window.onload = function() {

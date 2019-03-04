@@ -1,71 +1,36 @@
 <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>DjOnTheGo</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" media="screen" href="style.css" />
-    <!-- <link rel="stylesheet" type="text/css" media="screen" href="eqstyle.css"/> -->
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>DjOnTheGo</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+        <link rel="stylesheet" type="text/css" media="screen" href="style.css" />
 </head>
 <body>
-
-    <div class="flex-contanier ">
-        <div class="circle">
-            <div class="btn" id="play"><i class="fa fa-play"></i></div>
-            
-             <div class= "ttwrapper">
-                <img class="turn-table" src="vintage-player.jpg" alt="Record"> 
-             </div>
-            <div class="btn" id="stop"><i class="fa fa-stop"></i></div>
-        </div>        
+    <div class="contanier ">
+        <div class="circle responsive">
+            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="300px" height="300px" viewBox="0 0 300 300" enable-background="new 0 0 300 300" xml:space="preserve">
+                <defs>
+                    <path id="criclePath" d=" M 150, 150 m -120, 0 a 120,120 0 0,1 240,0 a 120,120 0 0,1 -240,0 "/>
+                </defs>
+                    <g>
+                        <use xlink:href="#criclePath" fill="none"/>
+                        <text fill="#fff">
+                        <textPath xlink:href="#criclePath">DJ On The Go
+                        </textPath>
+                        </text>
+                    </g>
+            </svg>
+            <div class= "ttwrapper">
+                <div class="btn reel" id="play"><i class="fa fa-play"></i></div>
+                <img class="turn-table responsive" src="./images/NewTurntable.jpg" alt="Record">
+                <div class="btn reel" id="stop"><i class="fa fa-stop"></i></div>
+            </div> 
+        </div>   
     </div>
-
-
+    <footer>&copy; Copyright 2019. This site was for testing only. Not intended for public release</footer>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="testfade.js"></script>
-    <!-- <script src="djotgapi.js"></script>  -->
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-<!-- 
-<!DOCTYPE html>
-<html>
-<head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>DjOnTheGo</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" media="screen" href="style.css" />
-   
-</head>
-<body>
-    <div class="col-12 col-sm-3 col-md-3 pb-2 rounded-circle pb-2 bg-primary"></div>
-        <div class="flex-contanier">  
-            <div class="bg-info clearfix">
-                
-                <button id="play" type="button" class="btn btn-secondary float-left"><i class="fas fa-play"></i></button>
-                <img class="turn-table" src="turntable.jpeg" alt="Cinque Terre" width="670">
-                <button id="stop" type="button" class="btn btn-secondary float-right"><i class="fas fa-stop"></i></button>
-            </div>      
-        </div>
-    </div>
-    
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="testfade.js"></script>
-    
-</body>
-</html> -->

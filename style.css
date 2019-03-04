@@ -1,69 +1,91 @@
 body{
-    background: url("https://101clipart.com/wp-content/uploads/02/Group%20Dance%20Clipart%2021.jpg"); no-repeat center;
-    background-size: cover;
-    color: green;
-    height: 100vh;
-    text-align: center;
-    margin-top: 150px;
+  max-width: 100%;
+  height: auto;
+  display: block;
+  background-image:url(./images/background.png); 
+  background-repeat: repeat; 
+  background-size: contain;
+  filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='.image.jpg',sizingMethod='scale');
+  -ms-filter:"progid:DXImageTransform.Microsoft.AlphaImageLoader(src='image.jpg',sizingMethod='scale')";
 }
 
-
-
-
- 
 .flex-container {
-display: flex;
+    display: flex;
+}
 
-}
- 
 .btn {
-background-color: rgb(245, 3, 3);
-justify-content: center
+    background-color: rgb(245, 3, 3);
+    justify-content: center
 }
-  
+
+
 #play{
-  position: absolute;
-  top: 45%;
-  left: 0px;  
+   position: absolute;
+   top: 45%;
+   left: 0px;
 }
 
 #stop{
-  position: absolute;
-  top: 45%;
-  right: 0px;
+   position: absolute;
+   top: 45%;
+   right: 0px;
 }
 
-.circle{
-  width: 700px;
-  height:700px;
-  border-radius: 50%;
-  margin: 0 auto;
-  float: none;
-  position: relative;
+ .circle{
+   width: 900px;
+   height:900px;
+   border-radius: 50%;
+   margin: 0 auto;
+   float: none;
+   position: relative;
+} 
 
-  
-  
-
-  background:rgb(107, 93, 93)
-  
-}
- 
 
 .ttwrapper{
-  text-align: center;
+   text-align: center;
 }
 
 .turn-table{
-  width: 500; 
-  height: 500;
-  border-radius: 50%;
-  /* margin-left: 50px; */
-  position: float;
-  margin-top: 100px;
+   width: 900;
+   height: 900;
+   border-radius: 50%;
+   position: relative;
+   margin: auto;
+   left: 0;
+   top: 0;
+   z-index: 2;
+}
+
+.circle svg { 
+    position: absolute; 
+    left: 0; 
+    top: 0; 
+    width: 100%; 
+    height: 100%;
+    animation-name: rotate;
+    animation-duration: 7s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    z-index: 3;}
+  
+  @keyframes rotate {
+      from { transform: rotate(0); }
+      to { transform: rotate(360deg); }
+}
+
+.responsive {
+   max-width: 100%;
+   height: auto;
+   display: block,
+}
+
+.reel{
+   z-index: 6;
 }
 
 
 
 
+    
 
 
